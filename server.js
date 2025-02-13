@@ -31,9 +31,13 @@ app.get('/collectibles/:index', (req, res) => {
     if (!collectibles[req.params.index]) {
         res.send('This item is not yet in stock. Check back soon!');
     } else {
-        res.send(`So, you want the ${collectibles[req.params.index].name}? For ${[req.params.index].price}, it can be yours!`);
+        res.send(`So, you want the ${collectibles[req.params.index].name}? For $${collectibles[req.params.index].price}, it can be yours!`);
     };
 });
+
+// 4.
+
+
 
 app.listen(3000, () => {
     console.log('Listening on port 3000');
